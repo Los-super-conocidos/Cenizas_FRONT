@@ -26,6 +26,10 @@ export class UserService {
     return  this.http.get<UserJson>(this.userUrlApi+"/"+correo);
   }
 
+  getProfile(): Observable<any> {
+    return this.http.get('https://graph.microsoft.com/v1.0/me');
+  }
+
   getUserFriends(correo:string):Observable<[string]>{
     return  this.http.get<[string]>(this.userUrlApi+"/"+correo+"/friends");
   }

@@ -26,7 +26,7 @@ export class RoomsService {
   }
 
   createRoom(serverName:string, isPublic:boolean,user:string): Observable<any>{
-    const params = new HttpParams().set('server_name', serverName).set("isPublic" ,isPublic).set( 'user_creator', user );
+    const params = new HttpParams().set('serverName', serverName).set("isPublic" ,isPublic).set( 'user_creator', user );
     return this.http.post<any>(this.roomApiUrl+"/create",null, { params: params });
   }
 

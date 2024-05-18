@@ -5,17 +5,16 @@
         <i class="ri-planet-line"></i> Cenizas del Pasado
       </a>
     </div>
-
     <div>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav align-items-center mr-auto">
-          <li class="nav-item" *ngIf="loginDisplay"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item" *ngIf="loginDisplay"><a class="nav-link" routerLink="/">Inicio</a></li>
           <li class="nav-item">
-            <a class="nav-link" *ngIf="loginDisplay" href="/loggin">Usuario</a>
+            <a class="nav-link" *ngIf="loginDisplay" routerLink="/loggin">Usuario</a>
           </li>
           <li class="nav-item dropdown__item">
             <div class="nav__link">
-              <a class="nav-link" *ngIf="loginDisplay" href="/amigos">
+              <a class="nav-link" *ngIf="loginDisplay" routerLink="/amigos">
                   <span *ngIf="newNot" class="notification-icon">
                       <i class="ri-notification-line"></i> <!-- Icono de notificación -->
                   </span>
@@ -73,7 +72,6 @@
               </li>
             </div>
           </li>
-
           <li class="nav-item" style="cursor: pointer" *ngIf="!loginDisplay">
             <a class="nav-link" (click)="login()">Iniciar sesión</a>
           </li>
